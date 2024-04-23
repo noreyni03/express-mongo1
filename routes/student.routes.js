@@ -6,6 +6,9 @@ module.exports = app => {
   router.post("/", students.create);
 
   // Retrieve all Students
+  router.get("/:id", students.findOne);
+
+  // Retrieve all Students
   router.get("/", students.findAll);
 
   // Delete a Student with id
