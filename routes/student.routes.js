@@ -1,12 +1,12 @@
 module.exports = app => {
-  const students = require("../controllers/student.controller.js");
+  const studentController = require("../controllers/student.controller.js");
   let router = require("express").Router();
 
   // Create a new Student
-  router.post("/", students.create);
+  router.post("/", studentController.create);
 
   // Retrieve all Students
-  router.get("/", students.findAll);
+  router.get("/", studentController.findAll);
 
   app.use("/api/students", router);
 };
